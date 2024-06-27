@@ -1,0 +1,458 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ede8f5;
+    color: #141619;
+    padding: 10px 20px;
+    position: fixed;
+    width: 99%; /* Ensure navigation spans full width */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid black;
+}
+
+.content {
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.content h2{
+    margin: 8px;
+    font-size: 40px;
+    color: #141619;
+    position: relative;
+    z-index: 1001;
+}
+
+.main-animation {
+  top: 16%;
+  left: 15%;
+  width: 1000px;
+  position: absolute;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.main-animation h1{
+  width: 1000px;
+  margin: 8px;
+  font-size: 120px;
+  color: black;
+  position: relative;
+  z-index: 0;
+}
+
+.nav-left {
+    font-size: 24px;
+}
+
+.nav-right a {
+    color: #141619;
+    text-decoration: none;
+    padding: 10px; /* Adjust padding as needed */
+    margin-left: 100px; /* Adjust as needed */
+    margin-right: 15px;
+    transition: font-weight 0.3s ease-in-out; /* Smooth transition for font weight */
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+@media (max-width: 768px) {
+    .nav-right {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .nav-right a {
+        margin: 5px 0; /* Adjust margins for vertical stacking */
+    }
+}
+
+
+.nav-right a:hover {
+    font-weight: bold; /* Make text bold on hover */
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    color: white;
+    border-bottom: 1.5px solid black;
+}
+
+#home { 
+    position: relative;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    background-color: #e48d12; /* Example background color */
+    color: black;
+}
+
+#first-heading {
+  margin-left: 50px;
+  font-size: 140px;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+} 
+#subheading{
+  margin-left: 50px;
+  position: absolute;
+  top: 63%;
+  font-size: 40px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@keyframes swipeUpAnimation {
+  0% {
+      transform: translateY(200%); /* Start from the bottom */
+      opacity: 0; /* Start invisible */
+  }
+  50% {
+      opacity: 1; /* Fade in halfway */
+  }
+  100% {
+      transform: translateY(0); /* Move to the top */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes swipeResetAnimation {
+  0% {
+      transform: translateY(0); /* Start from the top */
+  }
+  50% {
+      opacity: 1; /* Keep it visible halfway */
+  }
+  100% {
+      transform: translateY(100%); /* Visually reset to the bottom */
+      opacity: 0; /* Fade out */
+  }
+}
+
+#swipe-animation {
+  position: absolute;
+  top: 35%;
+  right: 7%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: auto;
+  animation: swipeUpAnimation 2s ease-in-out infinite; /* Initial swipe up animation */
+}
+
+#swipe-animation:hover {
+  animation: swipeResetAnimation 2s ease-in-out infinite; /* Reset animation on hover */
+}
+
+
+
+
+
+#about { background-color: #Ebe9e1; }
+#portfolio { 
+  background-color: #9C27B0;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.portfolio-header {
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.content-box {
+  background-color: white;
+  color: #333;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 1100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.content-box h2 {
+  margin-top: 0;
+}
+
+.content-box p {
+  margin: 10px 0 0;
+}
+
+#warning {
+  position: absolute;
+  top: 75%;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#experience{
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  overflow: hidden;
+  color: black;
+}
+
+#experience h1{
+  position: absolute;
+  top: 132%;
+  color: #141619;
+  font-size: 50px;
+}
+
+.sign-container {
+  top: 124.4%;
+  left: 0%;
+  position: absolute;
+  width: 99.7%;
+  height: 80px; /* Adjust the height as needed */
+  overflow: hidden;
+  background-color: #ede8f5;
+  color: #141619;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid #141619;
+  border-bottom: 2px solid #141619;
+  border-left: 2px solid #141619;
+}
+
+.sign-text {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll-text 10s linear infinite;
+  font-size: 24px; /* Adjust font size as needed */
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@keyframes scroll-text {
+  from {
+      transform: translateX(700%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+  #experience-boxone {
+    top: 147%;
+    position: absolute;
+    height: 250px;
+    width: 900px;
+    border: 2px solid black;
+    border-radius: 20px;
+    animation: slideinright 5s forwards;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  #experience-boxtwo {
+    top: 181%;
+    left: 33%;
+    position: absolute;
+    height: 250px;
+    width: 900px;
+    border: 2px solid black;
+    border-radius: 20px;
+    animation: slideinleft 5s forwards;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  #experience-boxthree {
+    top: 215%;
+    position: absolute;
+    height: 250px;
+    width: 900px;
+    border: 2px solid black;
+    border-radius: 20px; 
+    animation: slideinright 5s forwards; 
+    overflow: hidden;
+    padding: 10px;
+  }
+
+
+  @keyframes slideinright {
+    0%{
+      opacity: 0%;
+      left: -100%;
+    }
+    100%{
+      opacity: 100%;
+      left: 3%;
+    }
+  }
+
+  @keyframes slideinleft {
+    0%{
+      opacity: 0%;
+      left: 300%;
+    }
+    100%{
+      opacity: 100%;
+      left: 33%;
+    }
+  }
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #b3b4bd;
+    background-color: #141619;
+    height: 320px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+.footer p{
+  position: absolute;
+  top: 395%;
+}
+  
+#icons{
+  position: absolute;
+  top: 368%;
+  left: 0%;
+}  
+
+#icons ul li{
+  list-style-type: none;
+  display: inline;
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+#icons ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+#school-heading{
+  position: relative;
+  left: 20%;
+}
+
+#school-icons ul li{
+  list-style-type: none;
+}
+
+#school-icons{
+  position: absolute;
+  top: 368%;
+  left: 23%;
+}
+
+
+#school-icons img{
+  height: 70px;
+  margin-bottom: 35px;
+}
+
+
+.contact-form {
+  position: relative;
+  left: 14%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 550px;
+  margin: 0 auto;
+}
+.contact-form h3 {
+  margin-top: 0;
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+.form-group:last-child {
+  margin-right: 0;
+}
+.contact-form input, .contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.contact-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Typewriter animation */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    animation: typewriter 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
