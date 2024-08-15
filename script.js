@@ -1,6 +1,29 @@
 document.addEventListener('DOMContentLoaded', function(event){
     // Array with texts to type in typewriter
-    var dataText = ["Dagim T.", "Machine Learning", "GT Class of 27'"];
+    var dataText = ["Innovative",
+    "Tech-Savvy",
+    "Creative Thinker",
+    "Problem-Solver",
+    "Enthusiastic Learner",
+    "Detail-Oriented",
+    "Adaptive",
+    "Passionate",
+    "Resourceful",
+    "Future Software Engineer",
+    "Tech Enthusiast",
+    "Coding Aficionado",
+    "Data-Driven Developer",
+    "Algorithmic Expert",
+    "Programming Prodigy",
+    "Tech Innovator",
+    "AI Enthusiast",
+    "Systems Thinker",
+    "Development Enthusiast",
+    "Striving for Excellence",
+    "Building the Future",
+    "Empowering Through Technology",
+    "Driving Technological Change",
+    "Committed to Learning and Growth", "Machine Learning", "GT Class of 27'"];
     
     // Type one text in the typewriter
     // Keeps calling itself until the text is finished
