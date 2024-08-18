@@ -149,14 +149,6 @@ nav a:last-child {
   flex-direction: column;
 }
 
-#experience h2 {
-  font-size: 60px;
-  font-weight: 800;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
 #experiences {
   display: flex;
   flex-direction: row; /* Align items horizontally */
@@ -169,14 +161,16 @@ nav a:last-child {
 
 #experience1, #experience2, #experience3 {
   padding: 5px;
-  height: 600px;
-  width: 600px;
+  height: 73%;
+  width: 31.5%;
   border: 2px solid black;
   margin: 10px; /* Space between experience items */
   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease-in-out; /* Smooth transition for scaling and shadow */
   /* Optional: Add box-shadow for a more pronounced effect */
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 #experience1:hover, #experience2:hover, #experience3:hover {
