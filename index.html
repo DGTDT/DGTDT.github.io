@@ -3,150 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dagim Tibebeselassie | Tech Portfolio</title>
+    <title>Dagim G. Tibebeselassie | Portfolio</title>
+    <link rel="icon" type="image/png" href="resources/5b66dd1601a3a83ed04310da599dd0e2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="resources/Gray and Black Simple Studio Logo (1).png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        <div id="maintitle">
-            <h1>
-                Dagim T.
-            </h1>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Dagim Tibebeselassie</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <nav>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#experience">Experience</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#footer">Contact</a>
-            </div>
-        </nav>
-    </header>
+    </nav>
 
-    <!-- Home -->
-    <section id="home">
-        <div id="homecenterized">
-            <div id="swipingimage-container">
-                <img src="resources/swipe_up_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Swiping Up Image">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <div class="typing-container">
+                        <span id="typing-text" class="typing-text"></span>
+                        <span class="typing-cursor"></span>
+                    </div>
+                </h1>
+                <p class="hero-subtitle">Computer Science @ <span style="color: #B3A369;">Georgia Institute of Technology</span></p>
+                <p class="hero-description">Passionate about AI, System Architecture, and creating innovative solutions through code.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-code"></i> View Projects
+                    </a>
+                </div>
+                
+                <div class="hero-contact">
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> DagimT2027@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> (***)-***-****</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/dagimt" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/DGTDT" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tech-stack">
+                    <div class="tech-item">Artificial Intelligence</div>
+                    <div class="tech-item">Machine Learning</div>
+                    <div class="tech-item">System Architecture</div>
+                    <div class="tech-item">Full-Stack Development</div>
+                </div>
             </div>
-            <div id="animationtitle">
-                <h1></h1>
+        </div>
+
+        <!-- Vertical dot scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="dots-container">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
-            <div id="name">
-                <h1>I'm Dagim <br>Tibebeselassie</h1>
-            </div>
-            <p>Amazon Future Engineer | Top 20 Nationwide YVIP Finalist</p>
         </div>
     </section>
 
-    <section id="experience">
-      <h2 style="display: flex; justify-content: space-between; width: 100%; padding: 20px; padding-bottom: 0px; font-size: 4rem;">
-        EXPERIENCE 
-        <span style="color: aqua;">EXPERIENCE</span> 
-        <span style="color: chocolate;">EXPERIENCE</span>
-      </h2>
-      
-      <div id="experiences">
-        <div id="experience1">
-          <h4 style="font-size: 35px;">Best Buy Shift Lead | --\><br><strong style="font-style: italic; font-weight: 800;">2023-CURRENT</strong></h4>
-          <p style="word-spacing: 5px; letter-spacing: 2px;">As a Shift Lead at Best Buy, I have honed my customer service and management skills. My role involves overseeing daily operations, managing a team, and ensuring a high standard of customer satisfaction. Working in the computer department has significantly enhanced my technical knowledge of computers, allowing me to assist customers more effectively and stay informed about the latest technology trends.</p>
-          <img src="resources/bestbuy.png" alt="bestbuyimg" style="height: 40%;">
-      </div>      
-          <div id="experience2"><h4 style="font-size: 35px;">Computer Science @ Georgia Tech | <strong style="font-style: italic; font-weight: 800;">2024-2027</strong></h4>
-            <p style="line-height: 1.5; font-size: 16; color: #333;">As a Computer Science major at Georgia Tech, I am currently enrolled in Data Structures, which will deepen my understanding of algorithms and data organization. I am also concentrating in AI/Machine Learning, focusing on advanced technologies and techniques in artificial intelligence. My goal is to secure an internship for the summer of 2025 to gain practical experience and apply my skills in a professional setting.</p>
-            <img src="resources/gticon.png" alt="gticon" style="height: 20%;">
-          </div>
-          <div id="experience3"><h4 style="font-size: 35px;">YVIP Competition National Finalist | AMAZON | GT <strong style="font-style: italic; font-weight: 800;">2022</strong></h4>
-            <p style="line-height: 1.5; font-size: 16; color: #333;">I was honored to be a National Finalist in the "Your Voice is Power" Remix Competition, hosted by Georgia Tech, Amazon, and YELLOW in early 2023. Competing against talented individuals from across the country, I earned a top 20 ranking. This experience allowed me to combine my passion for coding and music, as I utilized JavaScript on the EarSketch platform to create a unique and innovative remix that stood out among the submissions.</p>
-            <img src="resources/gticon.png" alt="gticon" style="height: 20%;">
-          </div>
-      </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>PORTFOLIO</h2>
-    ** SITE UNDER DEVELOPMENT **
-  </section>
-  
-
-    <footer class="footer" id="footer">
-        <div class="footer__addr">
-          <h1 class="footer__logo">Thank You!</h1>
-              
-          <i class="fa fa-hand-o-down" style="font-size: 34px;" aria-hidden="true" id="pointer"></i>
-          
-          <address>
-            <p><br><a href="resources/Dagim_Tibebeselassie_2025_Resume (1).pdf" target="_blank">Download My Resume</a></p>
-                
-            <a class="footer__btn" href="mailto:DagimT2027@gmail.com">Email Me</a>
-          </address>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <!-- Add your Georgia Tech logo here -->
+                        <img src="resources/Georgia-Tech-Logo-PNG-Background.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Georgia Institute of Technology</h3>
+                        <span class="location">Atlanta, Georgia</span>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <p class="degree">B.S. in Computer Science</p>
+                    <p class="graduation">Graduation Date: May 2027</p>
+                    <p class="gpa">GPA: 3.68/4.0</p>
+                    <div class="coursework">
+                        <h4>Related Coursework:</h4>
+                        <div class="tags">
+                            <span class="tag">Data Structures & Algorithms</span>
+                            <span class="tag">Linear Algebra</span>
+                            <span class="tag">Integral/Differential Calculus</span>
+                            <span class="tag">Object-Oriented Programming</span>
+                            <span class="tag">Discrete Mathematics</span>
+                        </div>
+                    </div>
+                    <div class="threads">
+                        <h4>Threads/Concentration:</h4>
+                        <div class="thread-tags">
+                            <span class="thread-tag">Artificial Intelligence</span>
+                            <span class="thread-tag">System Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <ul class="footer__nav">
-          <li class="nav__item">
-            <h2 class="nav__title">Education</h2>
-      
-            <ul class="nav__ul">
-              <li>
-                <a href="https://www.cc.gatech.edu/"><img src="resources/GeorgiaTechIcon.png" alt="GT Icon" id="gticon"></a>
-              </li>
-                  
-              <li>
-                <a href="https://refcode.org/pages/index.html"><img src="resources/refcodeicon.png" alt="refcodeicon" id="refcodeicon"></a>
-              </li>
-            </ul>
-          </li>
-          
-          <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">Latest Updates</h2>
-            
-            <div id="latest_updates">
-              <div class="update">Classes start on August 19! Excited to kick off the new semester!<br>
-                <img src="resources/ramblinwreck.png" alt="ramblinwreck" style="height: 100px;">
-              </div>
-              <div class="update"><strong>LeetCode Problems Solved</strong><br>
-                <div class="language"><strong>Python:</strong> 67</div>
-                <div class="language"><strong>Java:</strong> 40</div><img src="resources/leetcode.png" alt="leetcodepicture" style="height: 50px;"></div>
-              <div class="update"><strong>Exciting News! 🚀</strong><br>
-                I’m planning to start a new software company focused on creating solutions for self-driving and flying vehicles. Stay tuned for more updates!</div>
-              <!-- Add more updates as needed -->
-          </div>
-          </li>
-          
-          <li class="nav__item">
-            <h2 class="nav__title">Socials</h2>
-            
-            <ul class="nav__ul">
-              <li>
-                <a href="https://www.instagram.com/thatguydagim/"><i class="fa fa-instagram" style="font-size: 44px;"></i></a>
-              </li>
-              
-              <li>
-                <a href="https://www.linkedin.com/in/dagimt/"><i class="fa fa-linkedin" style="font-size: 44px;"></i></a>
-              </li>
-              
-              <li>
-                <a href="https://github.com/DagimTibebeselassie"><i class="fa fa-github" style="font-size: 44px;"></i></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        
-        <div class="legal">
-            <p>&copy; 2024 Dagim Tibebeselassie. All rights reserved.</p>
-          
-          <div class="legal__links">
-            <span>Engineered with Yellow Jacket spirit.<img src="resources/buzzgt.png" alt="buzzgt" style="height: 40px;"></span>
-          </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Programming Languages -->
+                        <div class="skill-category active">
+                            <h3>Programming Languages</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <span class="skill-name">Python</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <span class="skill-name">JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <span class="skill-name">HTML/CSS</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-java"></i>
+                                    </div>
+                                    <span class="skill-name">Java</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-cuttlefish"></i>
+                                        <span class="plus-plus">++</span>
+                                    </div>
+                                    <span class="skill-name">C++</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-cuttlefish"></i>
+                                    </div>
+                                    <span class="skill-name">C</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-microchip"></i>
+                                    </div>
+                                    <span class="skill-name">Assembly</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <span class="skill-name">TypeScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tools & Platforms -->
+                        <div class="skill-category">
+                            <h3>Tools & Platforms</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span class="skill-name">VS Code</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span class="skill-name">PyCharm</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <span class="skill-name">GitHub</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <span class="skill-name">Jupyter</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                    <span class="skill-name">Android Studio</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-git-alt"></i>
+                                    </div>
+                                    <span class="skill-name">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Frameworks & Libraries -->
+                        <div class="skill-category">
+                            <h3>Frameworks & Libraries</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span class="skill-name">Flutter</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <span class="skill-name">Django</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <span class="skill-name">Plotly</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <span class="skill-name">NumPy</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <span class="skill-name">React</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <span class="skill-name">Next.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                    </div>
+                    <button class="carousel-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </footer>
-    
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Collaborator</h3>
+                            <span class="timeline-date">Jan 2024 – Apr 2024</span>
+                        </div>
+                        <p class="timeline-company">MORSE Studio Lab | Georgia State University</p>
+                        <ul class="timeline-details">
+                            <li>Developed interactive user interfaces for a robotic drilling system using Python and Plotly Dash, improving task efficiency by 20%</li>
+                            <li>Collaborated with a multidisciplinary team to ensure seamless integration between UI components and robotic hardware</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Competition Finalist</h3>
+                            <span class="timeline-date">Feb 2023 – Mar 2023</span>
+                        </div>
+                        <p class="timeline-company">National Finalist - "YVIP" Remix Competition | Georgia Tech</p>
+                        <ul class="timeline-details">
+                            <li>Ranked in the top 20 out of 600+ participants in a nationwide coding and music remix competition</li>
+                            <li>Designed a unique musical remix using JavaScript on EarSketch, combining technical and creative skills</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Sales Advisor</h3>
+                            <span class="timeline-date">May 2023 – Mar 2025</span>
+                        </div>
+                        <p class="timeline-company">Best Buy - Dunwoody, Georgia</p>
+                        <ul class="timeline-details">
+                            <li>Led a team of 5+ employees during peak shifts, ensuring smooth operations and efficient task delegation.</li>
+                            <li>Exceeded quarterly sales targets in M365 by 15% by mentoring new hires and implementing cross-selling strategies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>GT Movies Store</h3>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <p class="project-description">Full-stack movie e-commerce website with React and Django, featuring 1,000+ titles from TMDB API</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>MiniGPT Chatbot</h3>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <p class="project-description">AI chatbot using TensorFlow Keras with neural network for keyword detection and JSON-based responses</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>PokeTrade</h3>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <p class="project-description">Developed a full-stack platform with React (Vite), Django, and MySQL that enables users to buy, sell, trade, and generate
+Pokémon with real-time data from PokeAPI, TCG API, and OpenAI API</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Agile Methodology</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities and interesting projects.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>DagimT2027@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(***)-***-****</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Atlanta, Georgia</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/dagimt" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/DGTDT" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Dagim G. Tibebeselassie. All rights reserved. Engineered with Yellow Jacket spirit.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
