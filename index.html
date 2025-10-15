@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dagim G. Tibebeselassie | Portfolio</title>
+    <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="resources/5b66dd1601a3a83ed04310da599dd0e2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Encryption Loading Screen -->
+    <div id="loading-screen">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dot" style="background: #ff5f57;"></div>
+                <div class="terminal-dot" style="background: #ffbd2e;"></div>
+                <div class="terminal-dot" style="background: #28ca42;"></div>
+                <div class="terminal-title">system_init.sh — bash — 80×24</div>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <!-- Content will be added by JavaScript -->
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="encryption-progress"></div>
+        </div>
+        <div class="status-line">
+            <span class="text" id="status-text">Initializing encryption protocol...</span>
+            <span class="success" id="percentage">0%</span>
+        </div>
+    </div>
+
+    <!-- Your existing content -->
+    <div class="content" id="main-content">
+        <!-- Your entire website content goes here -->
+         <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -422,6 +449,9 @@ Pokémon with real-time data from PokeAPI, TCG API, and OpenAI API</p>
                         <a href="https://github.com/DGTDT" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
+                        <a href="resources/Dagim_Tibebeselassie_2025_Resume (2) (1).pdf" target="_blank" class="social-link">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -459,6 +489,7 @@ Pokémon with real-time data from PokeAPI, TCG API, and OpenAI API</p>
         </div>
     </footer>
 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

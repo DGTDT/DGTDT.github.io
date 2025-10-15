@@ -115,6 +115,9 @@
                 observer.observe(el);
             });
             
+            // EmailJS initialization (Add this at the top of your script)
+            emailjs.init("YOUR_PUBLIC_KEY"); // You'll get this from EmailJS
+
             // Contact form submission
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
@@ -133,10 +136,32 @@
                         return;
                     }
                     
-                    // In a real application, you would send this data to a server
-                    // For now, we'll just show a success message
-                    showNotification(`Thank you, ${name}! Your message has been sent.`, 'success');
-                    contactForm.reset();
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('.submit-btn');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Send email using EmailJS
+                    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                        from_name: name,
+                        from_email: email,
+                        message: message,
+                        to_email: "DagimT2027@gmail.com"
+                    })
+                    .then(function(response) {
+                        showNotification(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
+                        contactForm.reset();
+                    })
+                    .catch(function(error) {
+                        showNotification('Sorry, there was an error sending your message. Please try again later.', 'error');
+                        console.error('EmailJS error:', error);
+                    })
+                    .finally(function() {
+                        // Reset button state
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    });
                 });
             }
             
@@ -246,4 +271,157 @@
 
             // Start the typing animation after a short delay
             setTimeout(typeWriter, 1000);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const terminalOutput = document.getElementById('terminal-output');
+            const progressBar = document.getElementById('encryption-progress');
+            const statusText = document.getElementById('status-text');
+            const percentage = document.getElementById('percentage');
+            const mainContent = document.getElementById('main-content');
+
+            const terminalLines = [
+                { text: '<span class="path">root@portfolio:~</span> <span class="command">sudo system_init.sh</span>', delay: 500 },
+                { text: '[sudo] password for root: ********', delay: 800 },
+                { text: '<span class="success">✓</span> Authentication successful', delay: 600 },
+                { text: '<span class="text">Initializing secure connection...</span>', delay: 400 },
+                { text: '<span class="success">✓</span> TLS 1.3 handshake complete', delay: 700 },
+                { text: '<span class="text">Loading encryption modules...</span>', delay: 500 },
+                { text: '<span class="success">✓</span> AES-256-GCM initialized', delay: 600 },
+                { text: '<span class="success">✓</span> RSA-4096 keys generated', delay: 600 },
+                { text: '<span class="text">Establishing secure session...</span>', delay: 500 },
+                { text: '<span class="success">✓</span> Secure session established', delay: 700 },
+                { text: '<span class="text">Decrypting portfolio data...</span>', delay: 800 }
+            ];
+
+            let currentLine = 0;
+            let progress = 0;
+
+            function addTerminalLine(line) {
+                const lineElement = document.createElement('div');
+                lineElement.className = 'terminal-line';
+                lineElement.innerHTML = line;
+                terminalOutput.appendChild(lineElement);
+                
+                // Scroll to bottom
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            }
+
+            function updateProgress(value, text) {
+                progress = value;
+                progressBar.style.width = progress + '%';
+                percentage.textContent = progress + '%';
+                statusText.textContent = text;
+            }
+
+            function typeLines() {
+                if (currentLine < terminalLines.length) {
+                    const line = terminalLines[currentLine];
+                    setTimeout(() => {
+                        addTerminalLine(line.text);
+                        currentLine++;
+                        
+                        // Update progress based on current line
+                        const lineProgress = Math.min((currentLine / terminalLines.length) * 80, 80);
+                        updateProgress(lineProgress, getStatusText(currentLine));
+                        
+                        typeLines();
+                    }, line.delay);
+                } else {
+                    // Start encryption animation
+                    startEncryptionAnimation();
+                }
+            }
+
+            function getStatusText(lineIndex) {
+                const statuses = [
+                    'Initializing encryption protocol...',
+                    'Loading security modules...',
+                    'Establishing secure connection...',
+                    'Generating encryption keys...',
+                    'Decrypting portfolio data...',
+                    'Finalizing secure session...'
+                ];
+                return statuses[Math.min(lineIndex, statuses.length - 1)];
+            }
+
+            function startEncryptionAnimation() {
+                // Create encryption grid
+                const grid = document.createElement('div');
+                grid.className = 'encryption-grid';
+                grid.id = 'encryption-grid';
+                
+                // Add 100 cells (10x10 grid)
+                for (let i = 0; i < 100; i++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'encryption-cell';
+                    cell.textContent = Math.random().toString(16).substr(2, 1).toUpperCase();
+                    grid.appendChild(cell);
+                }
+                
+                terminalOutput.appendChild(grid);
+                
+                // Animate cells
+                let completedCells = 0;
+                const totalCells = 100;
+                const cellInterval = setInterval(() => {
+                    const cells = document.querySelectorAll('.encryption-cell');
+                    const randomCell = Math.floor(Math.random() * cells.length);
+                    
+                    cells[randomCell].classList.add('active');
+                    cells[randomCell].textContent = Math.random().toString(16).substr(2, 1).toUpperCase();
+                    
+                    setTimeout(() => {
+                        cells[randomCell].classList.remove('active');
+                    }, 200);
+                    
+                    completedCells++;
+                    
+                    // Update progress
+                    const encryptionProgress = 80 + (completedCells / totalCells) * 20;
+                    updateProgress(encryptionProgress, 'Finalizing decryption...');
+                    
+                    if (completedCells >= 50) {
+                        clearInterval(cellInterval);
+                        
+                        // Add final terminal lines
+                        setTimeout(() => {
+                            addTerminalLine('<span class="success">✓</span> Portfolio data decrypted successfully');
+                            updateProgress(95, 'Loading user interface...');
+                            
+                            setTimeout(() => {
+                                addTerminalLine('<span class="text">Initializing user interface...</span>');
+                                updateProgress(98, 'Almost ready...');
+                                
+                                setTimeout(() => {
+                                    addTerminalLine('<span class="success">✓</span> System ready');
+                                    addTerminalLine('<span class="path">root@portfolio:~</span> <span class="command">./start_portfolio.sh</span>');
+                                    updateProgress(100, 'Ready!');
+                                    
+                                    // Add blinking cursor at the end
+                                    const cursorLine = document.createElement('div');
+                                    cursorLine.className = 'terminal-line';
+                                    cursorLine.innerHTML = '<span class="blinking-cursor"></span>';
+                                    terminalOutput.appendChild(cursorLine);
+                                    
+                                    // Hide loading screen
+                                    setTimeout(() => {
+                                        loadingScreen.classList.add('fade-out');
+                                        mainContent.classList.add('loaded');
+                                        
+                                        setTimeout(() => {
+                                            loadingScreen.remove();
+                                        }, 800);
+                                    }, 1000);
+                                }, 500);
+                            }, 500);
+                        }, 500);
+                    }
+                }, 30);
+            }
+
+            // Start the loading sequence
+            setTimeout(() => {
+                typeLines();
+            }, 1000);
         });
