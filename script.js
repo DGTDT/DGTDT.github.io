@@ -425,3 +425,58 @@
                 typeLines();
             }, 1000);
         });
+        // Project data (you can customize this)
+const projectData = {
+    gtMovies: {
+        demoUrl: '#',
+        githubUrl: '#'
+    },
+    minigpt: {
+        demoUrl: '#',
+        githubUrl: '#'
+    },
+    pokeTrade: {
+        demoUrl: 'YOUR_GOOGLE_SITES_URL_HERE',
+        githubUrl: 'YOUR_GITHUB_URL_HERE'
+    }
+};
+
+// Modal functions
+function showProjectDetails(projectId) {
+    const modalId = projectId + 'Modal';
+    document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+function openDemo(projectId) {
+    const url = projectData[projectId]?.demoUrl;
+    if (url && url !== '#') {
+        window.open(url, '_blank');
+    } else {
+        // Show message or handle missing URL
+        alert('Demo link coming soon!');
+    }
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
+});

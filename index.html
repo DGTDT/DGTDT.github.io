@@ -379,46 +379,329 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <!-- GT Movies Store -->
+                <div class="project-card interactive">
                     <div class="project-header">
                         <h3>GT Movies Store</h3>
                         <span class="project-date">2025</span>
+                        <div class="project-badge">
+                            <i class="fas fa-film"></i>
+                            Full-Stack
+                        </div>
                     </div>
                     <p class="project-description">Full-stack movie e-commerce website with React and Django, featuring 1,000+ titles from TMDB API</p>
+                    
+                    <!-- Interactive Preview Section -->
+                    <div class="project-preview">
+                        <div class="preview-frame">
+                            <div class="preview-placeholder">
+                                <i class="fas fa-film" style="font-size: 3rem; color: #e50914; margin-bottom: 1rem;"></i>
+                                <p>Movie E-commerce Platform</p>
+                                <small>React & Django Full-Stack</small>
+                            </div>
+                        </div>
+                        <div class="preview-actions">
+                            <button class="preview-btn primary" onclick="showProjectDetails('gtMovies')">
+                                <i class="fas fa-info-circle"></i> Project Details
+                            </button>
+                            <button class="preview-btn secondary" onclick="openDemo('gtMovies')">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Django</span>
                         <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">TMDB API</span>
+                        <span class="tech-tag">PostgreSQL</span>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <!-- MiniGPT Chatbot -->
+                <div class="project-card interactive">
                     <div class="project-header">
                         <h3>MiniGPT Chatbot</h3>
                         <span class="project-date">2024</span>
+                        <div class="project-badge">
+                            <i class="fas fa-robot"></i>
+                            AI/ML
+                        </div>
                     </div>
                     <p class="project-description">AI chatbot using TensorFlow Keras with neural network for keyword detection and JSON-based responses</p>
+                    
+                    <!-- Interactive Preview Section -->
+                    <div class="project-preview">
+                        <div class="preview-frame">
+                            <div class="preview-placeholder">
+                                <i class="fas fa-robot" style="font-size: 3rem; color: #10b981; margin-bottom: 1rem;"></i>
+                                <p>AI Chatbot System</p>
+                                <small>Neural Network Implementation</small>
+                            </div>
+                        </div>
+                        <div class="preview-actions">
+                            <button class="preview-btn primary" onclick="showProjectDetails('minigpt')">
+                                <i class="fas fa-info-circle"></i> Project Details
+                            </button>
+                            <button class="preview-btn secondary" onclick="openDemo('minigpt')">
+                                <i class="fas fa-code"></i> View Code
+                            </button>
+                        </div>
+                    </div>
+                    
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Keras</span>
+                        <span class="tech-tag">NLP</span>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <!-- PokéTrade Platform -->
+                <div class="project-card interactive">
                     <div class="project-header">
-                        <h3>PokeTrade</h3>
+                        <h3>PokéTrade Platform</h3>
                         <span class="project-date">2025</span>
+                        <div class="project-badge">
+                            <i class="fas fa-users"></i>
+                            Team Project
+                        </div>
                     </div>
-                    <p class="project-description">Developed a full-stack platform with React (Vite), Django, and MySQL that enables users to buy, sell, trade, and generate
-Pokémon with real-time data from PokeAPI, TCG API, and OpenAI API</p>
+                    <p class="project-description">Full-stack platform with React (Vite), Django, and MySQL enabling users to buy, sell, trade, and generate Pokémon with real-time data from multiple APIs</p>
+                    
+                    <!-- Interactive Preview Section -->
+                    <div class="project-preview">
+                        <div class="preview-frame">
+                            <div class="preview-placeholder">
+                                <i class="fas fa-dragon" style="font-size: 3rem; color: #ff0000; margin-bottom: 1rem;"></i>
+                                <p>Pokémon Trading Platform</p>
+                                <small>Team Collaboration Project</small>
+                            </div>
+                        </div>
+                        <div class="preview-actions">
+                            <button class="preview-btn primary" onclick="showProjectDetails('pokeTrade')">
+                                <i class="fas fa-info-circle"></i> Project Details
+                            </button>
+                            <button class="preview-btn secondary" onclick="openDemo('pokeTrade')">
+                                <i class="fas fa-external-link-alt"></i> Project Docs
+                            </button>
+                        </div>
+                    </div>
+                    
                     <div class="project-tech">
-                        <span class="tech-tag">Agile Methodology</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Django</span>
                         <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Agile</span>
                         <span class="tech-tag">UI/UX</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    <!-- GT Movies Modal -->
+    <div id="gtMoviesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>GT Movies Store</h3>
+                <span class="close" onclick="closeModal('gtMoviesModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description">
+                    <p><strong>Full-stack E-commerce Platform</strong> for movie enthusiasts with comprehensive features and modern web technologies.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>E-commerce System</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>1,000+ Movies</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-search"></i>
+                            <span>Advanced Search</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <h4>Technology Stack</h4>
+                        <div class="tech-list">
+                            <span class="tech-item">React Frontend</span>
+                            <span class="tech-item">Django Backend</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">TMDB API</span>
+                            <span class="tech-item">RESTful APIs</span>
+                            <span class="tech-item">JWT Authentication</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <h4>Project Links</h4>
+                        <div class="links-grid">
+                            <a href="#" class="link-item" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="link-item" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MiniGPT Modal -->
+    <div id="minigptModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>MiniGPT Chatbot</h3>
+                <span class="close" onclick="closeModal('minigptModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description">
+                    <p><strong>AI-Powered Chatbot</strong> implementing neural networks for intelligent conversation and JSON-based response generation.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Neural Network</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Natural Language</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-code"></i>
+                            <span>JSON Responses</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time Processing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <h4>Technology Stack</h4>
+                        <div class="tech-list">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">TensorFlow</span>
+                            <span class="tech-item">Keras</span>
+                            <span class="tech-item">NLTK</span>
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Pandas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="key-features">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Keyword detection and pattern matching</li>
+                            <li>Context-aware conversations</li>
+                            <li>Structured JSON response format</li>
+                            <li>Custom training data support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-links">
+                        <h4>Project Links</h4>
+                        <div class="links-grid">
+                            <a href="#" class="link-item" target="_blank">
+                                <i class="fas fa-code"></i>
+                                <span>Source Code</span>
+                            </a>
+                            <a href="#" class="link-item" target="_blank">
+                                <i class="fas fa-book"></i>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PokéTrade Modal -->
+    <div id="pokeTradeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PokéTrade Platform</h3>
+                <span class="close" onclick="closeModal('pokeTradeModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description">
+                    <p><strong>Team Collaboration Project</strong> developed using modern web technologies to create a comprehensive Pokémon trading platform.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Real-time Trading</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Buy/Sell System</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Generation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>Multiple APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <h4>Technology Stack</h4>
+                        <div class="tech-list">
+                            <span class="tech-item">React (Vite)</span>
+                            <span class="tech-item">Django REST Framework</span>
+                            <span class="tech-item">MySQL Database</span>
+                            <span class="tech-item">PokeAPI Integration</span>
+                            <span class="tech-item">TCG API</span>
+                            <span class="tech-item">OpenAI API</span>
+                        </div>
+                    </div>
+                    
+                    <div class="key-features">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Real-time Pokémon trading between users</li>
+                            <li>Marketplace for buying and selling Pokémon</li>
+                            <li>AI-generated Pokémon using OpenAI</li>
+                            <li>Comprehensive inventory management</li>
+                            <li>User authentication and profiles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-links">
+                        <h4>Project Links</h4>
+                        <div class="links-grid">
+                            <a href="YOUR_GOOGLE_SITES_URL_HERE" class="link-item" target="_blank">
+                                <i class="fab fa-google"></i>
+                                <span>Google Sites Documentation</span>
+                            </a>
+                            <a href="YOUR_GITHUB_URL_HERE" class="link-item" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
